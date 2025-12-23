@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume — Kingsley Akenu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Slate-50 */
+            color: #334155; /* Slate-700 */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #0284c7, #0ea5e9); /* Sky-600 to Sky-500 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease-in-out;
+        }
+        .section-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.15), 0 4px 6px -2px rgba(14, 165, 233, 0.1);
+            border-color: #bae6fd; /* Sky-200 */
+        }
+        .section-title {
+            font-weight: 800;
+            font-size: 1.875rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #0f172a; /* Slate-900 */
+            border-left: 5px solid #0ea5e9;
+            padding-left: 1rem;
+        }
+        .subsection-title {
+             font-size: 1.25rem;
+             font-weight: 700;
+             margin-bottom: 0.25rem;
+             color: #0284c7; /* Sky-600 */
+        }
+        .content-font {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #475569; /* Slate-600 */
+        }
+        .timeline-line {
+            border-left: 2px solid #e0f2fe; /* Sky-100 */
+        }
+        .timeline-dot {
+            background-color: #ffffff;
+            border: 4px solid #0ea5e9; /* Sky-500 */
+        }
+        a.project-link:hover .icon-arrow {
+            transform: translate(4px, -4px);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-sky-100 selection:text-sky-900">
+
+    <div class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Header Section -->
+        <header class="text-center p-8 rounded-2xl bg-white border border-slate-100 shadow-xl mb-12 relative overflow-hidden">
+            <!-- PDF Download Button -->
+            <div class="absolute top-4 right-4 z-10">
+                <a href="Kingsley_Akenu_Resume.pdf" download class="flex items-center gap-2 bg-sky-50 hover:bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-bold transition-all border border-sky-200 shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>PDF Resume</span>
+                </a>
+            </div>
+
+            <div class="relative z-0">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight">Kingsley Akenu</h1>
+                <p class="mt-4 text-lg md:text-xl font-semibold text-sky-600">
+                    Data Scientist | Google Data Analyst Certified | Aspiring Big Data Expert | ALP Harvard 24 Alumni
+                </p>
+                
+                <div class="mt-6 flex justify-center items-center flex-wrap gap-x-6 gap-y-2 text-slate-500 font-medium text-sm md:text-base">
+                    <span class="flex items-center hover:text-sky-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sky-500" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.759a1.25 1.25 0 00-.465 1.679l.75 1.5a1.25 1.25 0 001.679.465l1.518-.759a1 1 0 011.06.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C6.477 18 2 13.523 2 8V3z" /></svg>
+                        +2347052851535
+                    </span>
+                    <a href="mailto:Kingsleya402@gmail.com" class="flex items-center hover:text-sky-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sky-500" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                        Kingsleya402@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/kayterthesly/" target="_blank" class="flex items-center hover:text-sky-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sky-500" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/Kayterthesly" target="_blank" class="flex items-center hover:text-sky-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sky-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <span class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-sky-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                        Lagos, Nigeria
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <main class="space-y-16">
+
+            <!-- Professional Summary -->
+            <section id="summary" class="section-card rounded-2xl p-8">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="content-font space-y-4 text-justify">
+                    <p>
+                        Data Scientist and Analytics Professional with a strong foundation in media and communications, uniquely skilled at transforming complex datasets into actionable insights and compelling narratives. Experienced in SQL, Python, Tableau, Power BI, Prompt Engineering, and Excel, with a proven track record of delivering predictive models, interactive dashboards, and business intelligence solutions that drive measurable impact, including 20% faster decision-making, 25% improved operational efficiency, and 30% enhanced targeting accuracy.
+                    </p>
+                    <p>
+                        Certified in Google Data Analytics and trained through Harvard’s Aspire Leadership Program, I combine technical expertise with leadership, collaboration, and problem-solving skills to optimize workflows and foster innovation. My career spans industries from finance and retail to technology and e-commerce, where I’ve consistently leveraged data to improve efficiency, reduce costs, and unlock growth opportunities.
+                    </p>
+                    <p>
+                        I bring a unique edge as a storyteller and strategist, bridging the gap between technical analysis and business communication, ensuring insights are not only accurate but also accessible and impactful for stakeholders at all levels.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience">
+                <h2 class="section-title mb-8">Experience</h2>
+                <div class="relative timeline-line ml-4 md:ml-6 space-y-12 pb-2">
+                    
+                    <!-- Role 1: Kwurah -->
+                    <div class="relative ml-8 md:ml-12">
+                        <div class="absolute -left-[43px] md:-left-[59px] top-1.5 w-6 h-6 timeline-dot rounded-full shadow-md"></div>
+                        <div class="section-card p-6 rounded-xl">
+                            <h3 class="subsection-title">Data Scientist (Contract)</h3>
+                            <p class="font-bold text-slate-800">Kwurah</p>
+                            <p class="text-sm text-sky-600 font-semibold mb-3">03/2025 - Present | Ontario, Canada (Remote)</p>
+                            <ul class="list-disc list-inside content-font space-y-2 marker:text-sky-500">
+                                <li>Leveraged analytics to identify and align market trends with organizational needs, achieving optimal talent and resource placement, resulting in 25% improved operational efficiency.</li>
+                                <li>Developed Tableau dashboards for property market analysis, achieving enhanced data visualization for stakeholders, resulting in 20% improved decision-making efficiency.</li>
+                                <li>Utilized SQL and Python to process large datasets, achieving accurate extraction of actionable insights, resulting in 15% optimized strategic recommendations for business growth.</li>
+                                <li>Collaborated remotely with cross-functional teams, achieving alignment of data solutions with business goals, resulting in 25% stronger project outcomes and team synergy.</li>
+                                <li>Applied leadership skills from Harvard's Aspire Leaders Program, achieving effective project guidance, resulting in 30% increased innovation and team performance.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role 2: Adezzz -->
+                    <div class="relative ml-8 md:ml-12">
+                        <div class="absolute -left-[43px] md:-left-[59px] top-1.5 w-6 h-6 timeline-dot rounded-full shadow-md"></div>
+                        <div class="section-card p-6 rounded-xl">
+                            <h3 class="subsection-title">Freelance Data Analyst</h3>
+                            <p class="font-bold text-slate-800">Adezzz</p>
+                            <p class="text-sm text-sky-600 font-semibold mb-3">12/2023 - Present | Lagos, Nigeria (Remote)</p>
+                            <p class="content-font italic mb-2">Focus: Data Infrastructure and Analytics</p>
+                            <ul class="list-disc list-inside content-font space-y-2 marker:text-sky-500">
+                                <li>Initiated the analytics workflow by cleaning and exploring Nigerian retail and e‑commerce coupon usage data in Excel Power Query and MySQL, then advanced to Python for feature engineering and predictive modeling, and finally integrated outputs into Power BI dashboards enhanced with prompt engineering.</li>
+                                <li>Streamlined data preparation by 40%, uncovered redemption drivers such as discount value and campaign timing with 74% feature importance, and built machine learning models (Logistic Regression, Decision Tree, Random Forest) that achieved 60% accuracy and improved prediction reliability by 70%.</li>
+                                <li>Delivered a predictive insights dashboard that helped retailers improve coupon targeting efficiency by 30%, reduce wasted marketing spend by 25%, and achieve measurable uplift in customer engagement — while demonstrating end‑to‑end analytics capability across data engineering, machine learning, and BI visualization.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role 3: Aspire Institute -->
+                    <div class="relative ml-8 md:ml-12">
+                        <div class="absolute -left-[43px] md:-left-[59px] top-1.5 w-6 h-6 timeline-dot rounded-full shadow-md"></div>
+                        <div class="section-card p-6 rounded-xl">
+                            <h3 class="subsection-title">Aspire Alumni</h3>
+                            <p class="font-bold text-slate-800">Aspire Institute (Higher Education)</p>
+                            <p class="text-sm text-sky-600 font-semibold mb-3">05/2024 - Present | Cambridge, MA (Remote)</p>
+                            <ul class="list-disc list-inside content-font space-y-2 marker:text-sky-500">
+                                <li>Engaged in Harvard-affiliated masterclasses, achieving mastery in presentation and problem-solving skills, resulting in 40% enhanced professional development and networking opportunities.</li>
+                                <li>Leveraged remote tools for diverse team contributions, achieving collaborative innovation, resulting in 35% transformative solutions and stronger interpersonal connections.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Role 4: Bank of Industry -->
+                    <div class="relative ml-8 md:ml-12">
+                        <div class="absolute -left-[43px] md:-left-[59px] top-1.5 w-6 h-6 timeline-dot rounded-full shadow-md"></div>
+                        <div class="section-card p-6 rounded-xl">
+                            <h3 class="subsection-title">Intern</h3>
+                            <p class="font-bold text-slate-800">Bank of Industry Limited</p>
+                            <p class="text-sm text-sky-600 font-semibold mb-3">01/2020 - 02/2021 | Lagos Island, Nigeria (On-Site)</p>
+                            <ul class="list-disc list-inside content-font space-y-2 marker:text-sky-500">
+                                <li>Managed email communication with clients and colleagues, achieving clear and polite correspondence, resulting in 25% improved stakeholder relations and efficient account management.</li>
+                                <li>Supported document management and data entry using Microsoft Excel, achieving accurate organization of spreadsheets and reports.</li>
+                                <li>Recorded and summarized meeting notes, sharing actionable insights with stakeholders.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                     <!-- Role 5: Triple K Ventures -->
+                     <div class="relative ml-8 md:ml-12">
+                        <div class="absolute -left-[43px] md:-left-[59px] top-1.5 w-6 h-6 timeline-dot rounded-full shadow-md"></div>
+                        <div class="section-card p-6 rounded-xl">
+                            <h3 class="subsection-title">Sales Manager</h3>
+                            <p class="font-bold text-slate-800">Triple K Ventures</p>
+                            <p class="text-sm text-sky-600 font-semibold mb-3">10/2017 - 12/2019 | Lagos, Nigeria</p>
+                            <ul class="list-disc list-inside content-font space-y-2 marker:text-sky-500">
+                                <li>Oversaw all data entry and customer relations, ensuring accurate inventory and sales tracking.</li>
+                                <li>Analyzed daily sales and profit data to inform strategic decision-making and loan repayment strategies.</li>
+                                <li>Spearheaded business growth by acquiring additional space, boosting inventory capacity and sales potential.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Impact & Projects Section -->
+            <section id="impact">
+                 <h2 class="section-title mb-8">Impact & Projects</h2>
+                 <div class="grid md:grid-cols-2 gap-6">
+                    
+                    <!-- Project 1 -->
+                    <a href="https://github.com/Kayterthesly/Coupon-Usage-Predictive-Analytics" target="_blank" class="block section-card rounded-xl p-6 project-link group">
+                         <div class="flex justify-between items-start">
+                            <h3 class="subsection-title group-hover:text-sky-500 transition-colors">Nigerian Retail Coupon Usage Predictive Analytics (Adezzz)</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sky-400 icon-arrow transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                         </div>
+                         <p class="text-sm text-slate-500 mb-2">10/2025 - 11/2025</p>
+                         <p class="content-font mb-4">An End‑to‑end predictive analytics for coupon redemption patterns in Nigeria’s retail and e-commerce sector.</p>
+                         <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">Machine Learning</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">Python</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">Jupyter Notebook</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">Predictive Analytics</span>
+                         </div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <a href="https://github.com/Kayterthesly/Nigerian-Retail-Coupon-Usage-Dashboard" target="_blank" class="block section-card rounded-xl p-6 project-link group">
+                        <div class="flex justify-between items-start">
+                             <h3 class="subsection-title group-hover:text-sky-500 transition-colors">Nigerian Retail Coupon Usage Dashboard Report (Adezzz)</h3>
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sky-400 icon-arrow transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-2">09/2025 - 10/2025</p>
+                        <p class="content-font mb-4">An end-to-end business intelligence project analyzing coupon redemption patterns in Nigeria’s retail and e-commerce sector.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">Excel</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">Power-BI</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">Prompt Engineering</span>
+                            <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">MySQL</span>
+                        </div>
+                    </a>
+
+                    <!-- Project 3 -->
+                    <a href="https://github.com/Kayterthesly/Kwurah-Africa-Tech-Report" target="_blank" class="block section-card rounded-xl p-6 project-link group">
+                        <div class="flex justify-between items-start">
+                             <h3 class="subsection-title group-hover:text-sky-500 transition-colors">Emerging Market Deep Dives (Nigeria & Africa)</h3>
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-sky-400 icon-arrow transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-2">04/2025 - 05/2025</p>
+                        <p class="content-font mb-4">Built interactive market research infographic using html, improving stakeholder insights by 45%.</p>
+                        <div class="flex flex-wrap gap-2">
+                           <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">Market Research</span>
+                           <span class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-slate-200">Data Visualization</span>
+                        </div>
+                    </a>
+
+                    <!-- Achievements -->
+                    <div class="section-card rounded-xl p-6">
+                         <h3 class="subsection-title mb-4">Key Achievements</h3>
+                         <ul class="space-y-3 content-font">
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">✓</span><span><strong>Tableau Dashboard Design:</strong> Enhanced decision-making by 20%.</span></li>
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">✓</span><span><strong>Data Processing Efficiency:</strong> Boosted operational efficiency by 15%.</span></li>
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">✓</span><span><strong>Leadership Impact:</strong> Increased project delivery speed by 10%.</span></li>
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">✓</span><span><strong>AI Prompt Engineering:</strong> Increased workflow efficiency speed by 45%.</span></li>
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">✓</span><span><strong>Business Growth Lead:</strong> Increased sales potential by 30%.</span></li>
+                         </ul>
+                     </div>
+                 </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="section-card rounded-2xl p-8">
+                <h2 class="section-title">Skills</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">SQL</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Python</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Tableau</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Microsoft Excel</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Power-Bi</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Dashboard Design</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Data Analysis & Processing</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Leadership & Presentation</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Collaborative Problem-Solving</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Remote Teamwork Tools</span>
+                    <span class="bg-white text-slate-700 font-semibold px-4 py-2 rounded-lg border border-slate-200 shadow-sm hover:border-sky-400 hover:bg-sky-50 transition-all cursor-default">Prompt Engineering</span>
+                </div>
+            </section>
+            
+            <!-- Education & Certifications Section -->
+            <section id="education-certs">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Education -->
+                    <div class="section-card rounded-2xl p-8">
+                        <h2 class="section-title text-xl mb-6">Education</h2>
+                        <div class="space-y-6 content-font">
+                            <div class="pb-4 border-b border-slate-100 last:border-0">
+                                <p class="font-bold text-slate-800">Data Science</p>
+                                <p class="text-sm text-sky-600">Aptech Learning (2025 - 2026)</p>
+                            </div>
+                            <div class="pb-4 border-b border-slate-100 last:border-0">
+                                <p class="font-bold text-slate-800">Higher National Diploma, Mass Communication</p>
+                                <p class="text-sm text-sky-600">Lagos State Polytechnic (2022 - 2024)</p>
+                            </div>
+                             <div class="pb-4 border-b border-slate-100 last:border-0">
+                                <p class="font-bold text-slate-800">National Diploma, Mass Communication</p>
+                                <p class="text-sm text-sky-600">Lagos State Polytechnic (2016 - 2019)</p>
+                            </div>
+                            <div class="pb-4 border-b border-slate-100 last:border-0">
+                                <p class="font-bold text-slate-800">Leadership Development</p>
+                                <p class="text-sm text-sky-600">Aspire Institute (2024)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="section-card rounded-2xl p-8">
+                        <h2 class="section-title text-xl mb-6">Certifications & Courses</h2>
+                        <ul class="space-y-3 content-font">
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">»</span><span>Deloitte - Data Analytics Job Simulation</span></li>
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">»</span><span>Google Data Analytics Specialization</span></li>
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">»</span><span>Business Analytics with Excel</span></li>
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">»</span><span>Excel Skills for Business Specialization</span></li>
+                             <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">»</span><span>Process Data from Dirty to Clean</span></li>
+                            <li class="flex items-start"><span class="text-sky-500 mr-2 font-bold">»</span><span>Introduction to Statistics - Stanford</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 py-8 border-t border-slate-200">
+            <p class="text-slate-400 font-medium">© 2025 Kingsley Akenu • Designed & Built with Precision</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
