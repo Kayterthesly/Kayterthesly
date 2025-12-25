@@ -13,11 +13,8 @@
 </p>
 
 ## 🚀 About Me 
-I'm a Data Scientist and Analytics Professional with a strong foundation in media and communications, uniquely skilled at transforming complex datasets into actionable insights and compelling narratives. Experienced in SQL, Python, Tableau, Power BI, Prompt Engineering, and Excel, with a proven track record of delivering predictive models, interactive dashboards, and business intelligence solutions that drive measurable impact, including 20% faster decision-making, 25% improved operational efficiency, and 30% enhanced targeting accuracy.
+I'm a Data Scientist & Analytics Professional skilled in SQL, Python, Tableau, Power BI, and Excel, with expertise in predictive modeling, dashboard design, and business intelligence. Certified in Google Data Analytics and trained through Harvard’s Aspire Leadership Program, I bridge data-driven insights and strategic communication to deliver measurable impact across finance, retail, and technology.
 
-Certified in Google Data Analytics and trained through Harvard’s Aspire Leadership Program, I combine technical expertise with leadership, collaboration, and problem-solving skills to optimize workflows and foster innovation. My focus is on building dashboards that get used, automating repetitive tasks to free up teams for more interesting problems, and creating models that help businesses plan for the future. My career spans industries from finance and retail to technology and e-commerce, where I’ve consistently leveraged data to improve efficiency, reduce costs, and unlock growth opportunities.
-
-I bring a unique edge as a storyteller and strategist, bridging the gap between technical analysis and business communication, I love the "aha!" moment when data reveals something new and useful. ensuring insights are not only accurate but also accessible and impactful for stakeholders at all levels.
 
 <!-- 🌐 Replace "your-username" with your actual GitHub username -->
 ### [🏆 Check Out My Full Portfolio Website](https://kayterthesly.github.io/Kayterthesly/)
