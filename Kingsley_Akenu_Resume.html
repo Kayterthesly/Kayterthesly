@@ -21,9 +21,8 @@
   .font-display{font-family:'Space Grotesk',sans-serif;}
   .font-mono{font-family:'JetBrains Mono',monospace;}
 
-  /* Status ticker */
   .ticker-track{
-    display:flex; white-space:nowrap; animation:tickerScroll 28s linear infinite;
+    display:flex; white-space:nowrap; animation:tickerScroll 36s linear infinite;
   }
   .ticker-wrap:hover .ticker-track{animation-play-state:paused;}
   @keyframes tickerScroll{
@@ -48,9 +47,6 @@
     width:9px; height:9px; border-radius:50%; background:var(--green);
     box-shadow:0 0 0 0 rgba(16,185,129,0.6);
     animation:pulseDot 2s ease-out infinite;
-  }
-  .progress-dot{
-    width:9px; height:9px; border-radius:50%; background:var(--gold);
   }
   @keyframes pulseDot{
     0%{box-shadow:0 0 0 0 rgba(16,185,129,0.55);}
@@ -82,21 +78,29 @@
     <div class="ticker-track font-mono text-xs text-[#94A3B8]">
       <span class="flex items-center gap-8 px-4">
         <span class="flex items-center gap-2"><span class="live-dot"></span> crypto-price-pipeline: LIVE</span>
-        <span class="text-[#0891B2]">CI/CD: passing</span>
-        <span class="text-[#0891B2]">API: 200 OK</span>
         <span class="text-[#F59E0B]">BTC RMSE: 0.0233</span>
         <span class="text-[#F59E0B]">ETH RMSE: 0.0358</span>
         <span>35 tests passing</span>
-        <span class="flex items-center gap-2"><span class="progress-dot"></span> healthcare-rag-pipeline: IN DEVELOPMENT</span>
+        <span class="text-[#0891B2]">|</span>
+        <span class="flex items-center gap-2"><span class="live-dot"></span> healthcare-readmission-pipeline: LIVE</span>
+        <span class="text-[#F59E0B]">Recall: 0.885</span>
+        <span class="text-[#F59E0B]">AUC-ROC: 0.566</span>
+        <span>71 tests passing</span>
+        <span class="text-[#10B981]">CI/CD: passing</span>
+        <span class="text-[#10B981]">API: 200 OK</span>
       </span>
       <span class="flex items-center gap-8 px-4" aria-hidden="true">
         <span class="flex items-center gap-2"><span class="live-dot"></span> crypto-price-pipeline: LIVE</span>
-        <span class="text-[#0891B2]">CI/CD: passing</span>
-        <span class="text-[#0891B2]">API: 200 OK</span>
         <span class="text-[#F59E0B]">BTC RMSE: 0.0233</span>
         <span class="text-[#F59E0B]">ETH RMSE: 0.0358</span>
         <span>35 tests passing</span>
-        <span class="flex items-center gap-2"><span class="progress-dot"></span> healthcare-rag-pipeline: IN DEVELOPMENT</span>
+        <span class="text-[#0891B2]">|</span>
+        <span class="flex items-center gap-2"><span class="live-dot"></span> healthcare-readmission-pipeline: LIVE</span>
+        <span class="text-[#F59E0B]">Recall: 0.885</span>
+        <span class="text-[#F59E0B]">AUC-ROC: 0.566</span>
+        <span>71 tests passing</span>
+        <span class="text-[#10B981]">CI/CD: passing</span>
+        <span class="text-[#10B981]">API: 200 OK</span>
       </span>
     </div>
   </div>
@@ -115,9 +119,13 @@
       </p>
 
       <div class="mt-7 flex flex-wrap justify-center gap-3">
-        <a href="https://e9yw5n-kayterthesly.shinyapps.io/crypto-price-pipeline/" target="_blank"
+        <a href="https://e9yw5n-kayterthesly.shinyapps.io/healthcare-readmission-pipeline/" target="_blank"
            class="px-5 py-2.5 rounded-lg bg-[#0891B2] text-white font-semibold text-sm hover:bg-[#0aa5cb] transition-colors">
-          View Live Dashboard
+          Healthcare Pipeline
+        </a>
+        <a href="https://e9yw5n-kayterthesly.shinyapps.io/crypto-price-pipeline/" target="_blank"
+           class="px-5 py-2.5 rounded-lg border border-[#0891B2] text-[#0891B2] font-semibold text-sm hover:bg-[#0891B2] hover:text-white transition-colors">
+          Crypto Pipeline
         </a>
         <a href="Kingsley_Akenu_Resume.pdf" download
            class="px-5 py-2.5 rounded-lg border border-[#F59E0B] text-[#F59E0B] font-semibold text-sm hover:bg-[#F59E0B] hover:text-[#0D1B3E] transition-colors">
@@ -138,128 +146,194 @@
 
     <main class="space-y-20">
 
-      <!-- FLAGSHIP PROJECT -->
+      <!-- LIVE PROJECTS -->
       <section class="reveal">
         <h2 class="font-display text-2xl font-bold text-white mb-5 flex items-center gap-3">
-          <span class="live-dot"></span> Currently Shipping
+          <span class="live-dot"></span> Live in Production
         </h2>
 
-        <div class="card rounded-2xl p-6 md:p-8">
-          <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
-            <div>
-              <h3 class="font-display text-xl md:text-2xl font-bold text-white">crypto-price-pipeline</h3>
-              <p class="text-sm text-[#94A3B8] mt-1">Production cryptocurrency forecasting system, built entirely in R</p>
+        <div class="space-y-6">
+
+          <!-- HEALTHCARE PROJECT -->
+          <div class="card rounded-2xl p-6 md:p-8">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
+              <div>
+                <h3 class="font-display text-xl md:text-2xl font-bold text-white">r-healthcare-readmission</h3>
+                <p class="text-sm text-[#94A3B8] mt-1">Production healthcare ML pipeline with RAG-cited clinical decision support</p>
+              </div>
+              <span class="font-mono text-xs font-semibold text-[#10B981] border border-[#10B981]/40 rounded-full px-3 py-1 flex items-center gap-2">
+                <span class="live-dot"></span> LIVE IN PRODUCTION
+              </span>
             </div>
-            <span class="font-mono text-xs font-semibold text-[#10B981] border border-[#10B981]/40 rounded-full px-3 py-1 flex items-center gap-2">
-              <span class="live-dot"></span> LIVE IN PRODUCTION
-            </span>
+
+            <p class="text-sm text-[#E8EDF5] mb-5 leading-relaxed">
+              End-to-end R pipeline that predicts 30-day hospital readmission risk from structured EHR data, 
+              explains each prediction with per-feature drivers, retrieves relevant clinical guidelines via a 
+              TF-IDF hybrid RAG system, and serves everything through a REST API with a full governance audit 
+              trail. Trained on 15,000 synthesized patients derived from real MIMIC-IV records. Every prediction 
+              is logged with a trace ID, model version, and hashed audit entry.
+            </p>
+
+            <div class="flex items-center gap-2 overflow-x-auto scrollbar-thin pb-3 mb-5 text-xs font-mono">
+              <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">MIMIC-IV / synthpop</span>
+              <span class="text-[#0891B2]">&rarr;</span>
+              <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">DuckDB / Backblaze B2</span>
+              <span class="text-[#0891B2]">&rarr;</span>
+              <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">XGBoost + RAG</span>
+              <span class="text-[#0891B2]">&rarr;</span>
+              <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">Railway API</span>
+              <span class="text-[#0891B2]">&rarr;</span>
+              <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">Shiny Dashboard</span>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+              <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
+                <p class="font-mono text-lg font-semibold text-[#F59E0B]">0.885</p>
+                <p class="text-xs text-[#94A3B8] mt-0.5">Recall (gate: 0.85)</p>
+              </div>
+              <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
+                <p class="font-mono text-lg font-semibold text-[#F59E0B]">0.566</p>
+                <p class="text-xs text-[#94A3B8] mt-0.5">AUC-ROC (honest)</p>
+              </div>
+              <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
+                <p class="font-mono text-lg font-semibold text-[#10B981]">71/71</p>
+                <p class="text-xs text-[#94A3B8] mt-0.5">Tests passing</p>
+              </div>
+              <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
+                <p class="font-mono text-lg font-semibold text-[#10B981]">8</p>
+                <p class="text-xs text-[#94A3B8] mt-0.5">Governance tables</p>
+              </div>
+            </div>
+
+            <div class="space-y-2 mb-5">
+              <div class="flex items-center gap-3 text-xs">
+                <span class="endpoint-badge bg-[#10B981]/15 text-[#10B981]">GET</span>
+                <span class="font-mono text-[#E8EDF5]">/health</span>
+                <span class="text-[#94A3B8]">Liveness probe</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs">
+                <span class="endpoint-badge bg-[#F59E0B]/15 text-[#F59E0B]">POST</span>
+                <span class="font-mono text-[#E8EDF5]">/predict</span>
+                <span class="text-[#94A3B8]">Risk score + top drivers + trace ID</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs">
+                <span class="endpoint-badge bg-[#F59E0B]/15 text-[#F59E0B]">POST</span>
+                <span class="font-mono text-[#E8EDF5]">/explain</span>
+                <span class="text-[#94A3B8]">Per-feature delta vs training median</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs">
+                <span class="endpoint-badge bg-[#0891B2]/15 text-[#0891B2]">POST</span>
+                <span class="font-mono text-[#E8EDF5]">/rag/summary</span>
+                <span class="text-[#94A3B8]">RAG-cited discharge recommendation</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">R</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">XGBoost</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">tidymodels</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">DuckDB</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">RAG / TF-IDF</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Gemini API</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Plumber</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Shiny / Plotly</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Backblaze B2</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Railway</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">testthat</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">GitHub Actions</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3 text-sm">
+              <a href="https://e9yw5n-kayterthesly.shinyapps.io/healthcare-readmission-pipeline/" target="_blank" class="text-[#0891B2] hover:text-white font-medium transition-colors">Live Dashboard &rarr;</a>
+              <a href="https://r-healthcare-readmission-production.up.railway.app/health" target="_blank" class="text-[#0891B2] hover:text-white font-medium transition-colors">API Health &rarr;</a>
+              <a href="https://github.com/Kayterthesly/r-healthcare-readmission" target="_blank" class="text-[#0891B2] hover:text-white font-medium transition-colors">Source Code &rarr;</a>
+            </div>
           </div>
 
-          <p class="text-sm text-[#E8EDF5] mb-5 leading-relaxed">
-            Ingests 5 years of daily Bitcoin and Ethereum prices from Yahoo Finance, engineers 15 technical
-            indicators, fits ARIMA forecasting models with a temporal train test split, and serves predictions
-            through a secured REST API to a live Shiny and Plotly dashboard. Retrains itself automatically every
-            day at 2am UTC and flags model drift before it becomes a problem.
-          </p>
+          <!-- CRYPTO PROJECT -->
+          <div class="card rounded-2xl p-6 md:p-8">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
+              <div>
+                <h3 class="font-display text-xl md:text-2xl font-bold text-white">crypto-price-pipeline</h3>
+                <p class="text-sm text-[#94A3B8] mt-1">Production cryptocurrency forecasting system, built entirely in R</p>
+              </div>
+              <span class="font-mono text-xs font-semibold text-[#10B981] border border-[#10B981]/40 rounded-full px-3 py-1 flex items-center gap-2">
+                <span class="live-dot"></span> LIVE IN PRODUCTION
+              </span>
+            </div>
 
-          <!-- Mini architecture row -->
-          <div class="flex items-center gap-2 overflow-x-auto scrollbar-thin pb-3 mb-5 text-xs font-mono">
-            <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">Yahoo Finance</span>
-            <span class="text-[#0891B2]">&rarr;</span>
-            <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">R Pipeline / DuckDB</span>
-            <span class="text-[#0891B2]">&rarr;</span>
-            <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">Railway API</span>
-            <span class="text-[#0891B2]">&rarr;</span>
-            <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">Shiny Dashboard</span>
+            <p class="text-sm text-[#E8EDF5] mb-5 leading-relaxed">
+              Ingests 5 years of daily Bitcoin and Ethereum prices from Yahoo Finance, engineers 15 technical
+              indicators, fits ARIMA forecasting models with a temporal train test split, and serves predictions
+              through a secured REST API to a live Shiny and Plotly dashboard. Retrains itself automatically every
+              day at 2am UTC and flags model drift before it becomes a problem.
+            </p>
+
+            <div class="flex items-center gap-2 overflow-x-auto scrollbar-thin pb-3 mb-5 text-xs font-mono">
+              <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">Yahoo Finance</span>
+              <span class="text-[#0891B2]">&rarr;</span>
+              <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">R Pipeline / DuckDB</span>
+              <span class="text-[#0891B2]">&rarr;</span>
+              <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">Railway API</span>
+              <span class="text-[#0891B2]">&rarr;</span>
+              <span class="bg-[#0D1B3E] border border-white/10 rounded-md px-3 py-1.5 whitespace-nowrap">Shiny Dashboard</span>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+              <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
+                <p class="font-mono text-lg font-semibold text-[#F59E0B]">0.0233</p>
+                <p class="text-xs text-[#94A3B8] mt-0.5">BTC RMSE</p>
+              </div>
+              <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
+                <p class="font-mono text-lg font-semibold text-[#F59E0B]">0.0358</p>
+                <p class="text-xs text-[#94A3B8] mt-0.5">ETH RMSE</p>
+              </div>
+              <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
+                <p class="font-mono text-lg font-semibold text-[#10B981]">35/35</p>
+                <p class="text-xs text-[#94A3B8] mt-0.5">Tests passing</p>
+              </div>
+              <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
+                <p class="font-mono text-lg font-semibold text-[#10B981]">Daily</p>
+                <p class="text-xs text-[#94A3B8] mt-0.5">Auto retrain, 2am UTC</p>
+              </div>
+            </div>
+
+            <div class="space-y-2 mb-5">
+              <div class="flex items-center gap-3 text-xs">
+                <span class="endpoint-badge bg-[#10B981]/15 text-[#10B981]">GET</span>
+                <span class="font-mono text-[#E8EDF5]">/health</span>
+                <span class="text-[#94A3B8]">No auth, liveness probe</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs">
+                <span class="endpoint-badge bg-[#0891B2]/15 text-[#0891B2]">GET</span>
+                <span class="font-mono text-[#E8EDF5]">/prices/history</span>
+                <span class="text-[#94A3B8]">API key required</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs">
+                <span class="endpoint-badge bg-[#F59E0B]/15 text-[#F59E0B]">POST</span>
+                <span class="font-mono text-[#E8EDF5]">/predict/price</span>
+                <span class="text-[#94A3B8]">API key plus rate limited</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">R</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">DuckDB</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">ARIMA</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Plumber</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Shiny / Plotly</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Docker</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Railway</span>
+              <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">GitHub Actions</span>
+            </div>
+
+            <div class="flex flex-wrap gap-3 text-sm">
+              <a href="https://e9yw5n-kayterthesly.shinyapps.io/crypto-price-pipeline/" target="_blank" class="text-[#0891B2] hover:text-white font-medium transition-colors">Live Dashboard &rarr;</a>
+              <a href="https://crypto-price-pipeline-production.up.railway.app/health" target="_blank" class="text-[#0891B2] hover:text-white font-medium transition-colors">API Health &rarr;</a>
+              <a href="https://github.com/Kayterthesly/crypto-price-pipeline" target="_blank" class="text-[#0891B2] hover:text-white font-medium transition-colors">Source Code &rarr;</a>
+            </div>
           </div>
 
-          <!-- Metrics grid -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
-            <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
-              <p class="font-mono text-lg font-semibold text-[#F59E0B]">0.0233</p>
-              <p class="text-xs text-[#94A3B8] mt-0.5">BTC RMSE</p>
-            </div>
-            <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
-              <p class="font-mono text-lg font-semibold text-[#F59E0B]">0.0358</p>
-              <p class="text-xs text-[#94A3B8] mt-0.5">ETH RMSE</p>
-            </div>
-            <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
-              <p class="font-mono text-lg font-semibold text-[#10B981]">35/35</p>
-              <p class="text-xs text-[#94A3B8] mt-0.5">Tests passing</p>
-            </div>
-            <div class="bg-[#0D1B3E] rounded-lg p-3 border border-white/5">
-              <p class="font-mono text-lg font-semibold text-[#10B981]">Daily</p>
-              <p class="text-xs text-[#94A3B8] mt-0.5">Auto retrain, 2am UTC</p>
-            </div>
-          </div>
-
-          <!-- Endpoints -->
-          <div class="space-y-2 mb-5">
-            <div class="flex items-center gap-3 text-xs">
-              <span class="endpoint-badge bg-[#10B981]/15 text-[#10B981]">GET</span>
-              <span class="font-mono text-[#E8EDF5]">/health</span>
-              <span class="text-[#94A3B8]">No auth, liveness probe</span>
-            </div>
-            <div class="flex items-center gap-3 text-xs">
-              <span class="endpoint-badge bg-[#0891B2]/15 text-[#0891B2]">GET</span>
-              <span class="font-mono text-[#E8EDF5]">/prices/history</span>
-              <span class="text-[#94A3B8]">API key required</span>
-            </div>
-            <div class="flex items-center gap-3 text-xs">
-              <span class="endpoint-badge bg-[#F59E0B]/15 text-[#F59E0B]">POST</span>
-              <span class="font-mono text-[#E8EDF5]">/predict/price</span>
-              <span class="text-[#94A3B8]">API key plus rate limited</span>
-            </div>
-          </div>
-
-          <div class="flex flex-wrap gap-2 mb-5">
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">R</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">DuckDB</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">ARIMA</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Plumber</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Shiny / Plotly</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Docker</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Railway</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">GitHub Actions</span>
-          </div>
-
-          <div class="flex flex-wrap gap-3 text-sm">
-            <a href="https://e9yw5n-kayterthesly.shinyapps.io/crypto-price-pipeline/" target="_blank" class="text-[#0891B2] hover:text-white font-medium transition-colors">Live Dashboard &rarr;</a>
-            <a href="https://crypto-price-pipeline-production.up.railway.app/health" target="_blank" class="text-[#0891B2] hover:text-white font-medium transition-colors">API Health &rarr;</a>
-            <a href="https://github.com/Kayterthesly/crypto-price-pipeline" target="_blank" class="text-[#0891B2] hover:text-white font-medium transition-colors">Source Code &rarr;</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- IN DEVELOPMENT -->
-      <section class="reveal">
-        <h2 class="font-display text-2xl font-bold text-white mb-5 flex items-center gap-3">
-          <span class="progress-dot"></span> In Development
-        </h2>
-        <div class="card rounded-2xl p-6 md:p-8">
-          <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
-            <div>
-              <h3 class="font-display text-xl font-bold text-white">Healthcare Forecasting and RAG Clinical Decision Support</h3>
-              <p class="text-sm text-[#94A3B8] mt-1">30 day hospital readmission prediction with a retrieval augmented generation layer</p>
-            </div>
-            <span class="font-mono text-xs font-semibold text-[#F59E0B] border border-[#F59E0B]/40 rounded-full px-3 py-1 flex items-center gap-2">
-              <span class="progress-dot"></span> IN DEVELOPMENT
-            </span>
-          </div>
-          <p class="text-sm text-[#E8EDF5] mb-5 leading-relaxed">
-            Binary classification target of readmission within 30 days, with a primary metric of Recall above 0.85
-            and Precision above 0.50. Trained on MIMIC-IV demo OMOP data synthesized to a larger patient population.
-            The RAG layer pulls clinical notes into context for an LLM assisted decision support output, with a
-            planned transition from the Gemini API to a locally hosted Llama 3 model.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">R</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">tidymodels</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">DuckDB</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">RAG</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Gemini API</span>
-            <span class="bg-white/5 text-[#94A3B8] text-xs font-mono px-2.5 py-1 rounded-md border border-white/10">Llama 3</span>
-          </div>
         </div>
       </section>
 
@@ -337,7 +411,7 @@
         <h2 class="font-display text-2xl font-bold text-white mb-6">Skills</h2>
         <div class="card rounded-2xl p-6 md:p-8 space-y-5">
           <div>
-            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">Programming & Data Analysis</p>
+            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">Programming and Data Analysis</p>
             <div class="flex flex-wrap gap-2">
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Python</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">R (Production Grade)</span>
@@ -346,26 +420,30 @@
             </div>
           </div>
           <div>
-            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">MLOps & Production Engineering</p>
+            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">MLOps and Production Engineering</p>
             <div class="flex flex-wrap gap-2">
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Docker</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">GitHub Actions CI/CD</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">REST APIs (Plumber)</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Drift Detection</span>
-              <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Automated Testing</span>
+              <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Automated Testing (testthat)</span>
+              <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Governance Audit Trails</span>
             </div>
           </div>
           <div>
-            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">Modeling & Forecasting</p>
+            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">Modeling and Forecasting</p>
             <div class="flex flex-wrap gap-2">
+              <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">XGBoost</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">ARIMA Time Series</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Logistic Regression</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Random Forest</span>
+              <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">tidymodels</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Feature Engineering</span>
+              <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">RAG / LLM Integration</span>
             </div>
           </div>
           <div>
-            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">BI & Visualization</p>
+            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">BI and Visualization</p>
             <div class="flex flex-wrap gap-2">
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Power BI</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Tableau</span>
@@ -374,10 +452,11 @@
             </div>
           </div>
           <div>
-            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">Cloud & Workflow</p>
+            <p class="font-mono text-xs uppercase tracking-wide text-[#0891B2] mb-2">Cloud and Infrastructure</p>
             <div class="flex flex-wrap gap-2">
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Railway</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">shinyapps.io</span>
+              <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Backblaze B2</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Google Cloud (BigQuery)</span>
               <span class="bg-white/5 text-[#E8EDF5] text-sm px-3 py-1.5 rounded-lg border border-white/10">Prompt Engineering</span>
             </div>
