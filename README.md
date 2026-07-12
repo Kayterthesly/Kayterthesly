@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EF7&center=true&vCenter=true&width=950&lines=Data+Scientist+%7C+MLOps+Engineer;Production+ML+Pipelines+%7C+R+%26+Python;Time+Series+Forecasting+%7C+ARIMA+%7C+DuckDB;REST+APIs+%7C+Docker+%7C+GitHub+Actions+CI%2FCD;Business+Intelligence+%7C+Analytics+Engineering;KAIZEN+%E6%94%B9%E5%96%84+%E2%80%94+Continuous+Improvement" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2E9EF7&center=true&vCenter=true&width=950&lines=Data+Scientist+%7C+MLOps+Engineer;Production+ML+Pipelines+%7C+R+%26+Python;Healthcare+AI+%7C+XGBoost+%7C+RAG+%7C+Clinical+Decision+Support;Time+Series+Forecasting+%7C+ARIMA+%7C+DuckDB;REST+APIs+%7C+Docker+%7C+GitHub+Actions+CI%2FCD;Business+Intelligence+%7C+Analytics+Engineering;KAIZEN+%E6%94%B9%E5%96%84+Continuous+Improvement" alt="Typing SVG" />
 </div>
 
-<h1 align="center">Hi there, I'm Kingsley 👋</h1>
+<h1 align="center">Hi there, I'm Kingsley</h1>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/kayterthesly"><img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin"></a>
@@ -16,130 +16,133 @@
 
 ---
 
-## 🚀 About Me
+## About Me
 
-**Data Scientist & MLOps Engineer** based in Lagos, Nigeria, with 3+ years of experience building end-to-end ML systems and analytics solutions across **Retail, E-commerce, Finance, and Crypto markets**.
+**Data Scientist and MLOps Engineer** based in Lagos, Nigeria, with 3+ years of experience building end-to-end ML systems and analytics solutions across **Healthcare, Retail, Finance, and Crypto markets**.
 
-I don't just build models — I ship production systems: secured REST APIs, automated retraining pipelines, CI/CD workflows, and cloud deployments that run themselves. My work spans the full stack from raw data ingestion to live interactive dashboards.
+I don't just build models. I ship production systems: secured REST APIs, automated retraining pipelines, CI/CD workflows, governance audit trails, and cloud deployments that run themselves. My work spans the full stack from raw data ingestion to live interactive dashboards.
 
 **What sets my work apart:**
-- Production-grade pipelines with automated testing, drift detection, and audit trails
-- Crypto-native financial engineering (not a copy-paste of equity assumptions)
+- Two production ML pipelines live in the cloud with real APIs and dashboards
+- Healthcare AI with clinical decision support via Retrieval-Augmented Generation
+- Governance-first engineering: every prediction is logged, hashed, and traceable
+- 71 + 35 = 106 automated tests across two projects, all passing
 - Systems designed for zero daily human intervention
-- Clean, modular, documented code — built to be handed off
 
-### [🏆 Full Portfolio](https://kayterthesly.github.io/Kayterthesly/)
+### [Full Portfolio](https://kayterthesly.github.io/Kayterthesly/)
 
 ---
 
-## 🔭 Current Projects
+## Live in Production
 
-### 🔐 [crypto-price-pipeline](https://github.com/Kayterthesly/crypto-price-pipeline) — **LIVE IN PRODUCTION**
-> Production-grade cryptocurrency price forecasting pipeline built entirely in R
+### [r-healthcare-readmission](https://github.com/Kayterthesly/r-healthcare-readmission) — LIVE IN PRODUCTION
+
+[![CI](https://github.com/Kayterthesly/r-healthcare-readmission/actions/workflows/ci.yml/badge.svg)](https://github.com/Kayterthesly/r-healthcare-readmission/actions/workflows/ci.yml)
+[![R 4.5](https://img.shields.io/badge/R-4.5.2-276DC2.svg?logo=r)](https://www.r-project.org/)
+[![Railway](https://img.shields.io/badge/API-Railway-0B0D0E?logo=railway)](https://r-healthcare-readmission-production.up.railway.app/health)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Kayterthesly/r-healthcare-readmission/blob/main/LICENSE)
+
+Production-grade healthcare ML pipeline predicting 30-day hospital readmission risk with RAG-cited clinical decision support.
+
+- **Pipeline:** MIMIC-IV MEDS demo (100 real patients) synthesised to 15,000 via synthpop, canonical casting, DuckDB feature engineering, XGBoost + glmnet training, explainability and fairness audit, TF-IDF hybrid RAG retrieval, Plumber REST API, Shiny dashboard, GitHub Actions CI/CD
+- **Model:** XGBoost v3, Recall 0.885 (gate: 0.85), AUC-ROC 0.566, honestly disclosed
+- **RAG:** 40/30/30 hybrid retrieval (TF-IDF cosine + keyword density + ICD tag overlap) across 8 synthetic clinical guideline documents
+- **Governance:** 8 DuckDB audit tables including predictions_audit, llm_call_log, fairness_reports with 19 subgroup rows
+- **Testing:** 71 automated tests (55 unit + 16 integration), 0 failures
+- **Fairness:** Race dimension flagged at 87pp recall gap, gender and insurance clear
+- **Deployment:** Railway (Plumber API) + shinyapps.io (Shiny dashboard) + Backblaze B2 (82MB Parquet storage)
+- Live Dashboard: https://e9yw5n-kayterthesly.shinyapps.io/healthcare-readmission-pipeline/
+- Live API: https://r-healthcare-readmission-production.up.railway.app/health
+
+---
+
+### [crypto-price-pipeline](https://github.com/Kayterthesly/crypto-price-pipeline) — LIVE IN PRODUCTION
 
 [![CI](https://github.com/Kayterthesly/crypto-price-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/Kayterthesly/crypto-price-pipeline/actions/workflows/ci.yml)
 [![R 4.5](https://img.shields.io/badge/R-4.5.0-276DC2.svg?logo=r)](https://www.r-project.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Kayterthesly/crypto-price-pipeline/blob/main/LICENSE)
 
-- **Pipeline:** Yahoo Finance → DuckDB → 15 technical features → ARIMA → Plumber API → Shiny dashboard
-- **Automation:** GitHub Actions cron (02:00 UTC daily) — retrains, validates, detects model drift
+Production-grade cryptocurrency price forecasting pipeline built entirely in R.
+
+- **Pipeline:** Yahoo Finance, DuckDB, 15 technical features, ARIMA, Plumber API, Shiny dashboard
+- **Automation:** GitHub Actions cron (02:00 UTC daily), retrains, validates, detects model drift
 - **Security:** X-API-Key auth, rate limiting, CORS, no secrets in code
 - **Testing:** 35 automated tests (14 data integrity + 6 feature + 11 modeling + 1 integration)
-- **Performance:** BTC-USD RMSE 0.0233 (~2.3% daily error) · ETH-USD RMSE 0.0358 (~3.6%)
-- 🌐 **Live Dashboard:** https://e9yw5n-kayterthesly.shinyapps.io/crypto-price-pipeline/
-- 🚀 **Live API:** https://crypto-price-pipeline-production.up.railway.app/health
+- **Performance:** BTC-USD RMSE 0.0233, ETH-USD RMSE 0.0358
+- Live Dashboard: https://e9yw5n-kayterthesly.shinyapps.io/crypto-price-pipeline/
+- Live API: https://crypto-price-pipeline-production.up.railway.app/health
 
 ---
 
-### 🏥 Healthcare Forecasting & RAG Clinical Decision Support Pipeline — **IN PROGRESS**
-> Binary classification system predicting 30-day hospital readmission with Retrieval-Augmented Generation (RAG) clinical decision support
+## Earlier Projects
 
-- **Target:** `readmitted_30d` — primary metric Recall ≥ 0.85, Precision ≥ 0.50
-- **Data:** MIMIC-IV Demo OMOP seed data, synthesised to ~50,000 patients via `synthpop`
-- **RAG layer:** Clinical notes via `ellmer`/Gemini API → Ollama/Llama 3 transition strategy
-- **Stack:** R · tidymodels · DuckDB · ellmer · Gemini API · Llama 3
-- **Stage:** Data scaffold and synthesis pipeline — active development
-
----
-
-### 📊 Earlier Projects
 - **Nigerian Retail Coupon Dashboard** — Excel + MySQL + Power BI (end-to-end BI pipeline)
 - **Coupon Redemption Prediction** — Python ML + Power BI (predictive analytics)
 - **Business Analytics Curriculum** — 29-day R + Python course for Aptech Centre, Lagos (Nigerian fintech case studies)
 
 ---
 
-## 🌱 Currently Learning
-- Advanced ML techniques with `tidymodels` and Scikit-learn
-- Retrieval-Augmented Generation (RAG) for clinical NLP
-- LLM integration in R via `ellmer` and Ollama
+## Currently Learning
+
+- Advanced deep learning for tabular healthcare data
 - Web3 and blockchain analytics
-- Funded MSc programmes in Data Science (target: 2026–2027)
+- Funded MSc programmes in Data Science (target: 2026-2027)
 
 ---
 
-## 🛠️ Technical Skillset
+## Technical Skillset
 
-### Languages & Core Tools
+### Languages and Core Tools
 <p>
   <img src="https://img.shields.io/badge/R-Production%20Grade-276DC3?style=flat&logo=r&logoColor=white" alt="R">
   <img src="https://img.shields.io/badge/Python-Intermediate-3776AB?style=flat&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/SQL-Advanced-4479A1?style=flat&logo=mysql&logoColor=white" alt="SQL">
 </p>
 
-### ML & Forecasting
+### ML and Forecasting
 <p>
+  <img src="https://img.shields.io/badge/XGBoost-Production-F7931E?style=flat" alt="XGBoost">
   <img src="https://img.shields.io/badge/ARIMA-Time%20Series-0891B2?style=flat" alt="ARIMA">
   <img src="https://img.shields.io/badge/tidymodels-ML%20Framework-276DC3?style=flat&logo=r&logoColor=white" alt="tidymodels">
-  <img src="https://img.shields.io/badge/Scikit--learn-Intermediate-F7931E?style=flat&logo=scikit-learn&logoColor=white" alt="Scikit-learn">
   <img src="https://img.shields.io/badge/RAG-Clinical%20NLP-10B981?style=flat" alt="RAG">
   <img src="https://img.shields.io/badge/Feature%20Engineering-Production-6366F1?style=flat" alt="Feature Engineering">
   <img src="https://img.shields.io/badge/Drift%20Detection-MLOps-EF4444?style=flat" alt="Drift Detection">
+  <img src="https://img.shields.io/badge/Fairness%20Auditing-Governance-8B5CF6?style=flat" alt="Fairness Auditing">
 </p>
 
-### Data Engineering & Databases
+### Data Engineering and Databases
 <p>
   <img src="https://img.shields.io/badge/DuckDB-Embedded%20OLAP-FFC107?style=flat" alt="DuckDB">
+  <img src="https://img.shields.io/badge/Backblaze%20B2-Cloud%20Storage-E05B26?style=flat" alt="Backblaze B2">
   <img src="https://img.shields.io/badge/PostgreSQL-Intermediate-336791?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL">
   <img src="https://img.shields.io/badge/MySQL-Advanced-4479A1?style=flat&logo=mysql&logoColor=white" alt="MySQL">
-  <img src="https://img.shields.io/badge/dplyr-Expert-276DC3?style=flat&logo=r&logoColor=white" alt="dplyr">
-  <img src="https://img.shields.io/badge/tidyquant-Finance%20Data-276DC3?style=flat&logo=r&logoColor=white" alt="tidyquant">
+  <img src="https://img.shields.io/badge/Apache%20Arrow-Parquet-CC2927?style=flat" alt="Arrow">
 </p>
 
-### APIs, Dashboards & Visualisation
+### APIs, Dashboards and Visualisation
 <p>
   <img src="https://img.shields.io/badge/Plumber-REST%20API-E4003A?style=flat&logo=r&logoColor=white" alt="Plumber">
   <img src="https://img.shields.io/badge/Shiny-Interactive%20Apps-276DC3?style=flat&logo=r&logoColor=white" alt="Shiny">
   <img src="https://img.shields.io/badge/Plotly-Interactive%20Viz-3F4F75?style=flat&logo=plotly&logoColor=white" alt="Plotly">
   <img src="https://img.shields.io/badge/Power%20BI-Advanced-F2C811?style=flat&logo=powerbi&logoColor=black" alt="Power BI">
-  <img src="https://img.shields.io/badge/Excel-Expert-217346?style=flat&logo=microsoft-excel&logoColor=white" alt="Excel">
   <img src="https://img.shields.io/badge/Tableau-Intermediate-E97627?style=flat&logo=tableau&logoColor=white" alt="Tableau">
-  <img src="https://img.shields.io/badge/ggplot2-Expert-276DC3?style=flat&logo=r&logoColor=white" alt="ggplot2">
+  <img src="https://img.shields.io/badge/Excel-Expert-217346?style=flat&logo=microsoft-excel&logoColor=white" alt="Excel">
 </p>
 
-### DevOps, Cloud & MLOps
+### DevOps, Cloud and MLOps
 <p>
   <img src="https://img.shields.io/badge/Docker-Containerisation-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker">
   <img src="https://img.shields.io/badge/GitHub%20Actions-CI%2FCD-2088FF?style=flat&logo=github-actions&logoColor=white" alt="GitHub Actions">
   <img src="https://img.shields.io/badge/Railway-Cloud%20Deploy-0B0D0E?style=flat&logo=railway&logoColor=white" alt="Railway">
   <img src="https://img.shields.io/badge/shinyapps.io-App%20Deploy-276DC3?style=flat&logo=r&logoColor=white" alt="shinyapps.io">
   <img src="https://img.shields.io/badge/renv-Reproducibility-276DC3?style=flat&logo=r&logoColor=white" alt="renv">
-  <img src="https://img.shields.io/badge/testthat-Unit%20Testing-276DC3?style=flat&logo=r&logoColor=white" alt="testthat">
-  <img src="https://img.shields.io/badge/Git-Version%20Control-F05032?style=flat&logo=git&logoColor=white" alt="Git">
-</p>
-
-### Business Intelligence & Analytics
-<p>
-  <img src="https://img.shields.io/badge/A%2FB%20Testing-Experienced-FF6B6B?style=flat" alt="A/B Testing">
-  <img src="https://img.shields.io/badge/Statistical%20Analysis-Advanced-4ECDC4?style=flat" alt="Statistical Analysis">
-  <img src="https://img.shields.io/badge/KPI%20Development-Expert-96CEB4?style=flat" alt="KPI Development">
-  <img src="https://img.shields.io/badge/Predictive%20Modeling-Production-45B7D1?style=flat" alt="Predictive Modeling">
-  <img src="https://img.shields.io/badge/Prompt%20Engineering-Applied%20AI-8B5CF6?style=flat" alt="Prompt Engineering">
+  <img src="https://img.shields.io/badge/testthat-106%20Tests%20Passing-27ae60?style=flat&logo=r&logoColor=white" alt="testthat">
+  <img src="https://img.shields.io/badge/Gemini%20API-LLM%20Integration-4285F4?style=flat&logo=google&logoColor=white" alt="Gemini">
 </p>
 
 ---
 
-## 📈 GitHub Stats
+## GitHub Stats
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Kayterthesly&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" height="165"/>
@@ -148,17 +151,17 @@ I don't just build models — I ship production systems: secured REST APIs, auto
 
 ---
 
-## 🏆 Approach: KAIZEN 改善
+## KAIZEN 改善
 
-> *Continuous improvement — not perfection on day one, but better with every commit.*
+> *Continuous improvement. Not perfection on day one, but better with every commit.*
 
-Every project I ship follows a disciplined, stage-by-stage process: verify the foundation before building the walls, write tests before deploying, automate what other people do manually. The `crypto-price-pipeline` went through 40 commits across 8 production stages — each one verified before the next began.
+Every project I ship follows a disciplined, stage-by-stage process: verify the foundation before building the walls, write tests before deploying, document every decision and every failure honestly. The healthcare pipeline went through 10 verified stages and 12 documented deployment failures before going live. The crypto pipeline went through 8 stages and 40+ commits. Both are now running in production with zero daily human intervention.
 
 That is what separates a portfolio project from a production system.
 
 ---
 
 <p align="center">
-  <i>Open to remote Data Scientist · MLOps Engineer · Analytics Engineer · ML Engineer roles</i><br/>
+  <i>Open to remote Data Scientist, MLOps Engineer, Analytics Engineer, and ML Engineer roles</i><br/>
   <a href="mailto:Kingsleya402@gmail.com">Kingsleya402@gmail.com</a>
 </p>
