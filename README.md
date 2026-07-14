@@ -146,8 +146,9 @@ Production-grade cryptocurrency price forecasting pipeline built entirely in R.
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=Kayterthesly&theme=tokyonight&hide_border=true" alt="GitHub Streak" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kayterthesly&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kayterthesly&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=86400" alt="Top Languages" height="165"/>
 </p>
+
 ---
 
 ## KAIZEN 改善
